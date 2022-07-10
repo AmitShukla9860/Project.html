@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backtracking Algorithms</title>
+    <link rel="Icon" href="./Backtracking.png">
+</head>
+<body>
+    <h1>Backtracking Algorithms</h1>
+    <p> <mark>Backtracking is an <I>algorithmic</I> technique for solving problems recursively by trying to build a solution incrementally, one piece at a time, removing those solutions that fail to satisfy the constraints of the problem at any point of time (by time, here, is referred to the time elapsed till reaching any level of the search tree).</mark></p>
+
+    <p>For example, consider the SudoKo solving Problem, we try filling digits one by one. Whenever we find that current digit cannot lead to a solution, we remove it (backtrack) and try next digit. This is better than naive approach (generating all possible combinations of digits and then trying every combination one by one) as it drops a set of permutations whenever it backtracks.</p>
+<center><img src="https://media.geeksforgeeks.org/wp-content/uploads/sudoku.jpg" alt=""></center>
+<p><a href=""></a></p>
+<ol type="1"> 
+    <li>Backtracking | Set 1 (The Knight’s tour problem)</li>
+    <li>Backtracking | Set 2 (Rat in a Maze)</li>
+    <li>Backtracking | Set 3 (N Queen Problem)</li>
+    <li>Backtracking | Set 4 (Subset Sum)</li>
+    <li>Backtracking | Set 5 (m Coloring Problem)</li>
+    <li>Backtracking | Set 6 (Hamiltonian Cycle)</li>
+    <li>Backtracking | Set 7 (Sudoku)</li>
+    <li>Backtracking | Set 8 (Solving Cryptarithmetic Puzzles)</li>
+</ol>
+<ol start="8" reversed="true"> 
+    <li>Backtracking | Set 1 (The Knight’s tour problem)</li>
+    <li>Backtracking | Set 2 (Rat in a Maze)</li>
+    <li>Backtracking | Set 3 (N Queen Problem)</li>
+    <li>Backtracking | Set 4 (Subset Sum)</li>
+    <li>Backtracking | Set 5 (m Coloring Problem)</li>
+    <li>Backtracking | Set 6 (Hamiltonian Cycle)</li>
+    <li>Backtracking | Set 7 (Sudoku)</li>
+    <li>Backtracking | Set 8 (Solving Cryptarithmetic Puzzles)</li>
+</ol>
+<h3>Quick Links</h3>
+<ul type="square">
+    <li>Top 20 Backtracking Algorithm Interview Questions</li>
+    <li>‘Practice Problems’ on Backtracking</li>
+    <li>‘Quiz’ on Backtracking</li>
+    <li>‘Videos’ on Backtracking</li>
+</ul>
+<h3>Algorithm</h3>
+<font size="4" color="blue">
+<pre>
+    Step 1 − if current_position is goal, return success
+    Step 2 − else,
+    Step 3 − if current_position is an end point, return failed.
+    Step 4 − else, if current_position is not end point, explore and repeat above steps.
+</pre>
+</font>
+<p>Let’s use this backtracking problem to find the solution to <strong><font size="4" color="purple">N-Queen Problem</font></strong> .</p>
+<p><font size="4">In N-Queen problem, we are given an NxN chessboard and we have to place n queens on the board in such a way that no two queens attack each other. A queen will attack another queen if it is placed in horizontal, vertical or diagonal points in its way. Here, we will do 4-Queen problem.</font></p>
+<p>Here, the solution is −</p>
+<center>
+<img src="./n-queen_problem.jpg" alt=""></center>
+<p>Here, the binary output for n queen problem with 1’s as queens to the positions are placed.</p>
+<pre>
+{0 , 1 , 0 , 0}
+{0 , 0 , 0 , 1}
+{1 , 0 , 0 , 0}
+{0 , 0 , 1 , 0}
+</pre>
+<p>For solving n queens problem, we will try placing queen into different positions of one row. And checks if it clashes with other queens. If current positioning of queens if there are any two queens attacking each other. If they are attacking, we will backtrack to previous location of the queen and change its positions. And check clash of queen again.</p>
+
+<h3>Algorithm</h3>
+
+<pre><font size="4">
+Step 1 − Start from 1st position in the array.
+Step 2 − Place queens in the board and check. Do,
+Step 2.1 − After placing the queen, mark the position as a part of the solution and then recursively check if this will lead to a solution.
+Step 2.2 − Now, if placing the queen doesn’t lead to a solution and trackback and go to step (a) and place queens to other rows.
+Step 2.3 − If placing queen returns a lead to solution return TRUE.
+Step 3 − If all queens are placed return TRUE.
+Step 4 − If all rows are tried and no solution is found, return FALSE.
+</font></pre>
+<table border="1" align="center" cellpadding="4">
+    <thead>
+        <tr>
+            <th bgcolor="aqua">Sr.No</th>
+            <th bgcolor="aqua">Name</th>
+            <th bgcolor="aqua">Age</th>
+            <th bgcolor="aqua">Gender</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td bgcolor="lightgrey">1</td>
+            <td>Amit</td>
+            <td>23</td>
+            <td>Male</td>
+        </tr>
+        <tr>
+            <td bgcolor="lightgrey">2</td>
+            <td>Amit</td>
+            <td>23</td>
+            <td>Male</td>
+        </tr>
+    </tbody>
+
+</table>
+
+
+
+
+
+
+
+</body>
+</html>
